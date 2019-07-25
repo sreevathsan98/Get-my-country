@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <title>Country</title>
+   <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+
+
+
+
+<!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Lato|Notable&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8">
+				<div id="branding" class="animated slideInDown">
+				<h1>Get your City</h1>
+			</div></div>
+			<div class="col-sm-4">
+		<nav class="animated bounceInRight">
+			<ul>
+				<li><a href="main.html">HOME</a></li>
+			</ul>
+		</nav></div></header>
+		 <button onclick="back()" >BACK</button>
+		<div class="container"  id = "resultscity">
+			
+
+			
+		</div>
+		
+	</div></div>
+	<script type="text/javascript">
+	function getParams(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+	}
+	function back() {
+		window.location = getParams('next')
+	}
+	function apiCall(){
+		let search = getParams('alpha')
+		let url = 'https://restcountries.eu/rest/v2/alpha/' + search;
+		fetch(url)
+		.then(function(response){
+			return response.json();
+		})
+		.then(function(myJSON){
+			let result = myJSON;
+			console.log(result)
+				var i; var text = "";
+
+
+				var d1 = document.getElementById("resultscity");
+				d1.className = "CARD";
+				d1.innerHTML = `
+				<table>
+                  <tr>
+                        <td>Capital</td>
+                        <td id="capital">${result.capital}</td>
+									</tr>
+									<tr>
+									<td>Population</td>
+									<td id="population">${result.population}</td>
+									</tr>
+									<tr>
+									<td>Area</td>
+									<td id="area">${result.area}</td>
+									</tr>
+									<tr>
+									<td>Numeric Code</td>
+									<td id="numcode">${result.numericCode}</td>
+									</tr>
+                  </table>
+				`;
+
+  				
+ 
+				
+			
+		})
+	}
+	apiCall()
+</script>
+	<footer>
+		Copyright &copy
+	</footer>
+
+
+ 
+</body>
+</html>

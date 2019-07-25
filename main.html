@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Country</title>
+   <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+
+
+
+
+<!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Lato|Notable&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8">
+				<div id="branding" class="animated slideInDown">
+				<h1>Get your Country</h1>
+			</div></div>
+			<div class="col-sm-4">
+		<nav class="animated bounceInRight">
+			<ul>
+				<li><a href="#">Home</a></li>
+			</ul>
+		</nav></div></header>
+		<div id="form1" class="container-fluid animated zoomIn">
+		<div class="row">
+			<div class="col-sm-12">
+					<div class="row" id="inp"><input type="text" id="searchcity" placeholder="Enter the Country"></div>
+				
+					<div class="row"><button type="submit" onclick="apiCall()">Search</button></div>
+			</div>
+			
+		</div></div>
+		<div class="container"  id = "resultscity" style="align-content: center;">
+			
+
+			
+		</div>
+		
+	</div></div>
+	<script type="text/javascript">
+	function goTo(e){
+		console.log(e)
+		window.location = `./results.html?alpha=${e}&next=${window.location}`
+	}
+	function apiCall(e){
+		let search = document.getElementById('searchcity').value;
+		let url = 'https://restcountries.eu/rest/v2/name/' + search;
+		fetch(url)
+		.then(function(response){
+			return response.json();
+		})
+		.then(function(myJSON){
+			let result = myJSON;
+			console.log(result)
+			//window.alert(result[1].name);
+				var i; var text = "";
+				var x = ''
+			for (i = 0; i < result.length; i++) {
+				 x += `<div onclick="goTo('${result[i].alpha3Code}')" class="CARD"><img class="iconflag" src="${result[i].flag}"<p>${result[i].name}</p><a></a></div>`		
+ 
+				}
+
+				document.getElementById("resultscity").innerHTML = x;
+			
+		})
+	}
+</script>
+	<footer>
+		Copyright &copy
+	</footer>
+
+
+ 
+</body>
+</html>

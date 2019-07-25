@@ -1,0 +1,221 @@
+body
+{
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+
+	padding: 0px;
+	margin: 0px;
+	background: #ECE9E6;  /* fallback for old browsers */
+background: #D31027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #EA384D, #D31027) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%; width: 100%;
+
+	
+}
+.p{
+	font-size: 25px;
+}
+.container-fluid{
+	width : 95%;	
+	overflow: hidden; 
+	align-content: center;
+	justify-content: center;
+}
+
+#form1{
+	margin-bottom: 20px;
+	margin-top: 40px;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	padding: 25px;
+	width: 30%;
+	height: auto;
+	border-radius: 15px;
+	background: white;
+box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+
+}
+
+#form2{
+	margin-bottom: 20px;
+	margin-top: 40px;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	padding: 25px;
+	width: 30%;
+	height: auto;
+	border-radius: 15px;
+	background: white;
+box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+
+}
+#inp input, #inp input:focus
+{
+	margin: 20px;
+	font-size: 15px;
+	border-radius: 10px;
+	border : 0px;
+	padding: 8px;
+	background: #FAFFAA;
+
+	text-align: center;
+	width: 80%;
+	
+}
+#branding{
+	color: white;
+
+}
+#branding:hover{
+	color: #FAFFAA;
+}
+
+::selection{
+	background: black;
+	color: white;
+}
+
+nav{
+	float: right;
+	padding-top: 20px;
+}
+
+header ul{
+	margin: 0px;
+	padding: 0px;
+}
+header li{
+	float: right;
+	display: inline;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+nav a
+{
+	text-decoration: none;
+	color: white;
+}
+ nav a:hover
+ {
+ 	text-decoration: none;
+ 	font-size: 14px;
+ 	color: #FAFFAA;
+ }
+
+ #signup{
+ 	margin-top:5px;
+ }
+ #signup a
+ {
+ 	color: #1ba94c;
+ 	font-family: lato;
+ 	text-decoration: none;
+ 	 
+ }
+#signup a:hover
+ {
+ 	color: #1ba94c;
+ 	font-family: lato;
+ 	text-decoration: none;
+ 	font-weight: bold;
+ }
+
+ button{
+ 	margin: 10px;
+ 	padding: 10px;
+ 	width: 40%;
+ 	border-radius: 10px;
+ 	background: #1ba94c  ;
+ 	border : none;
+ 	font-weight: bold;
+ 	color: white;
+ 	box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);}
+
+ 	 button:hover {
+ 	margin: 10px;
+ 	padding: 10px;
+ 	width: 45%;
+ 	border-radius: 10px;
+ 	background: #1ba94c  ;
+ 	border : none;
+ 	font-size: 15px;
+ 	font-weight: bold;
+ 	color: white;
+ 	box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.5);}
+
+footer {
+  position: fixed;
+  
+  bottom: 0;
+  width: 100%;
+  bottom-margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+#log 
+{
+	margin-bottom: 20px;
+	margin-top: 40px;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	padding: 25px;
+	width: 30%;
+	height: auto;
+	border-radius: 15px;
+	background: white;
+box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+color: white;
+}
+
+.CARD{
+	margin-bottom: 20px;
+	margin-top: 40px;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	padding: 25px;
+	width: 30%;
+	height: auto;
+	border-radius: 15px;
+	background: white;
+box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.34);
+font-family: 'Lato', sans-serif;
+	font-size: 15px;
+}
+
+
+.CARD:hover{
+	margin-bottom: 20px;
+	margin-top: 40px;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	padding: 25px;
+	width: 30%;
+	height: auto;
+	border-radius: 15px;
+	background: white;
+box-shadow: 6px 6px 12px -2px rgba(0,0,0,0.34);
+font-family: 'Lato', sans-serif;
+	font-size: 17px;
+}
+
+#resultscity{
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+	}
+.iconflag{
+	width: 100px;
+	height: auto;
+	padding-bottom: 55px;
+
+}
